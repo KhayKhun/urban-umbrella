@@ -1,7 +1,7 @@
 # gui - graphical user interface
 # cli - command line interface
 import tkinter as tk
-# oknrsr
+# oknrsr ma nar sar bu kwr
 
 root = tk.Tk()
 # decalre section
