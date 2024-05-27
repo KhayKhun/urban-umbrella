@@ -45,7 +45,7 @@ title = tk.Label(text="Happy"+" " +date.strftime("%A")+ "!!")
 b = tk.Button(root, text="save", command=save)
 t1 = tk.Label(text= date.strftime("%d"+"/"+"%m"+"/"+"%y"))
 b1 = tk.Button(root, text="open", command=open_file)
-
+root.iconbitmap("../images/logo.ico")
 
 title.pack()
 b.pack()
