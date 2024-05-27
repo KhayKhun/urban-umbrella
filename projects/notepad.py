@@ -10,7 +10,7 @@ def save():
     path = filedialog.asksaveasfilename(
         defaultextension=".txt",
         filetypes=[
-            ("Txt file tway pr", "*.txt"),
+            ("Text", "*.txt"),
             ("Python", "*.py"),
         ]
     )
@@ -26,16 +26,30 @@ def save():
         existed_file = open(path, "w")
         existed_file.write(t.get("1.0",tk.END))
         existed_file.close()
-
+def open_file():
+    path = filedialog.askopenfilename(
+        
+        filetypes=[
+            ("Text", "*.txt"),
+            ("Python", "*.py"),
+        ]
+    )
+    if path:
+        with open(path, 'r') as file:
+            lines = file.readlines()
+        t.delete(1.0, tk.END)
+        for line in lines:
+            t.insert(tk.END, line)
 date = datetime.datetime.now()
 title = tk.Label(text="Happy"+" " +date.strftime("%A")+ "!!")
 b = tk.Button(root, text="save", command=save)
 t1 = tk.Label(text= date.strftime("%d"+"/"+"%m"+"/"+"%y"))
-
+b1 = tk.Button(root, text="open", command=open_file)
 
 
 title.pack()
 b.pack()
+b1.pack()
 t.pack()
 
 t1.pack()
