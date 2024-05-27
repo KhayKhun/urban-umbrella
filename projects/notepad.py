@@ -3,7 +3,7 @@ import datetime
 from tkinter import filedialog
 import os
 root = tk.Tk()
-
+root.iconbitmap("../images/logo.ico")
 date = datetime.datetime.now()
 root.title("Happy " + date.strftime("%A")+ "!!")
 
@@ -30,6 +30,7 @@ def save():
         existed_file = open(path, "w")
         existed_file.write(text_box.get("1.0",tk.END))
         existed_file.close()
+
 def open_file():
     path = filedialog.askopenfilename(
         filetypes=[
@@ -43,9 +44,11 @@ def open_file():
         text_box.delete(1.0, tk.END)
         for line in lines:
             text_box.insert(tk.END, line)
+            text_box.insert(tk.END, line)
 
 menu_bar.add_command(label="save",command=save)
 menu_bar.add_command(label="open",command=open_file)
+
 
 root.config(menu=menu_bar)
 text_box.pack()
