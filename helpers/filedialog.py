@@ -8,8 +8,11 @@ def selectfolder():
     path = filedialog.asksaveasfilename( # save a file
         filetypes=[("Text files","*.txt"),("All files","*.*")] # accept file types
     )
+    f = open(path, "x")
+    
+    f.close()
 
-    print(path)      
+    print(path)
 
 root = tk.Tk()
 b = tk.Button(root, text="click", command=selectfolder)
