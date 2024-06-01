@@ -6,21 +6,20 @@ for i in range(0,n): # range() gives us only whole numbers
 
 print("---------------------")
 
-for p in people:
+for p in people: # give each items in a list
     print(p)
-
 
 def sumNums(x,y):
     return x + y
 
-result = sumNums(5,6)
+result = sumNums(5,6) # use ',' in calling functions with parameters
 print(result)
 
-range(0,5,6) # built in function, that returns a list
+range(0,5,6) # built in function, so we must use ','
 
-x = people[:5] # not a funtion
+x = people[:5] # not a funtion, so we use ':'
 
-# funtions
+# more built-in funtions
 print(x)
 int('3')
 str(6)
