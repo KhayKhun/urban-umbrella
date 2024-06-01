@@ -1,6 +1,7 @@
 people = ["ku","ju","paing","pu","poo","aung","phyo"]
 
-for i in range(0,len(people)): # whole number
+n = len(people) # int
+for i in range(0,n): # range() gives us only whole numbers
     print(people[i])
 
 print("---------------------")
